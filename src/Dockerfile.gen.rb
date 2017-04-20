@@ -9,7 +9,7 @@ dockerfile = []
 dockerfile << "FROM ubuntu:17.04"
 dockerfile << "RUN apt-get update"
 dockerfile << "RUN apt-get upgrade -y"
-dockerfile << "RUN apt-get install -y moreutils"
+dockerfile << "RUN apt-get install -y moreutils curl"
 apts.each do |apt|
   dockerfile << "RUN chronic apt-get install -y #{ apt }"
 end
