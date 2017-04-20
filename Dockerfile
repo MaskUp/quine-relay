@@ -3,6 +3,8 @@ RUN apt-get update && apt-get upgrade -y
 RUN apt-get -qq install -y afnix && apt-get clean
 RUN apt-get -qq install -y algol68g && apt-get clean
 RUN apt-get -qq install -y aplus-fsf && apt-get clean
+RUN apt-get -qq install -y aspectc++ && apt-get clean
+RUN apt-get -qq install -y aspectj && apt-get clean
 RUN apt-get -qq install -y asymptote && apt-get clean
 RUN apt-get -qq install -y ats2-lang && apt-get clean
 RUN apt-get -qq install -y bash && apt-get clean
@@ -13,6 +15,7 @@ RUN apt-get -qq install -y cduce && apt-get clean
 RUN apt-get -qq install -y clisp && apt-get clean
 RUN apt-get -qq install -y clojure && apt-get clean
 RUN apt-get -qq install -y cmake && apt-get clean
+RUN apt-get -qq install -y cmake && apt-get clean
 RUN apt-get -qq install -y coffeescript && apt-get clean
 RUN apt-get -qq install -y dafny && apt-get clean
 RUN apt-get -qq install -y dc && apt-get clean
@@ -21,6 +24,7 @@ RUN apt-get -qq install -y elixir && apt-get clean
 RUN apt-get -qq install -y emacs24 && apt-get clean
 RUN apt-get -qq install -y erlang && apt-get clean
 RUN apt-get -qq install -y f2c && apt-get clean
+RUN apt-get -qq install -y flex && apt-get clean
 RUN apt-get -qq install -y fp-compiler && apt-get clean
 RUN apt-get -qq install -y fsharp && apt-get clean
 RUN apt-get -qq install -y g++ && apt-get clean
@@ -28,6 +32,7 @@ RUN apt-get -qq install -y gambas3-script && apt-get clean
 RUN apt-get -qq install -y gap && apt-get clean
 RUN apt-get -qq install -y gawk && apt-get clean
 RUN apt-get -qq install -y gcc && apt-get clean
+RUN apt-get -qq install -y gdb && apt-get clean
 RUN apt-get -qq install -y gdc && apt-get clean
 RUN apt-get -qq install -y genius && apt-get clean
 RUN apt-get -qq install -y gforth && apt-get clean
@@ -40,9 +45,11 @@ RUN apt-get -qq install -y gnuplot && apt-get clean
 RUN apt-get -qq install -y gobjc && apt-get clean
 RUN apt-get -qq install -y golang && apt-get clean
 RUN apt-get -qq install -y gpt && apt-get clean
+RUN apt-get -qq install -y gri && apt-get clean
 RUN apt-get -qq install -y groff && apt-get clean
 RUN apt-get -qq install -y groovy && apt-get clean
 RUN apt-get -qq install -y guile-2.0 && apt-get clean
+RUN apt-get -qq install -y gzip && apt-get clean
 RUN apt-get -qq install -y haxe && apt-get clean
 RUN apt-get -qq install -y icont && apt-get clean
 RUN apt-get -qq install -y iconx && apt-get clean
@@ -51,11 +58,14 @@ RUN apt-get -qq install -y iverilog && apt-get clean
 RUN apt-get -qq install -y jasmin-sable && apt-get clean
 RUN apt-get -qq install -y jq && apt-get clean
 RUN apt-get -qq install -y julia && apt-get clean
+RUN apt-get -qq install -y ksh && apt-get clean
 RUN apt-get -qq install -y libgd-dev && apt-get clean
 RUN apt-get -qq install -y libpng-dev && apt-get clean
 RUN apt-get -qq install -y lisaac && apt-get clean
+RUN apt-get -qq install -y livescript && apt-get clean
 RUN apt-get -qq install -y llvm && apt-get clean
 RUN apt-get -qq install -y lua5.3 && apt-get clean
+RUN apt-get -qq install -y m4 && apt-get clean
 RUN apt-get -qq install -y make && apt-get clean
 RUN apt-get -qq install -y maxima && apt-get clean
 RUN apt-get -qq install -y minizinc && apt-get clean
@@ -65,32 +75,46 @@ RUN apt-get -qq install -y mono-mcs && apt-get clean
 RUN apt-get -qq install -y mono-vbnc && apt-get clean
 RUN apt-get -qq install -y nasm && apt-get clean
 RUN apt-get -qq install -y neko && apt-get clean
+RUN apt-get -qq install -y nescc && apt-get clean
 RUN apt-get -qq install -y nickle && apt-get clean
 RUN apt-get -qq install -y nim && apt-get clean
+RUN apt-get -qq install -y node-typescript && apt-get clean
 RUN apt-get -qq install -y nodejs && apt-get clean
 RUN apt-get -qq install -y ocaml && apt-get clean
 RUN apt-get -qq install -y octave && apt-get clean
 RUN apt-get -qq install -y open-cobol && apt-get clean
 RUN apt-get -qq install -y openjdk-8-jdk && apt-get clean
+RUN apt-get -qq install -y pakcs && apt-get clean
 RUN apt-get -qq install -y pari-gp && apt-get clean
+RUN apt-get -qq install -y parser3-cgi && apt-get clean
 RUN apt-get -qq install -y perl && apt-get clean
 RUN apt-get -qq install -y php-cli && apt-get clean
 RUN apt-get -qq install -y pike8.0 && apt-get clean
 RUN apt-get -qq install -y python && apt-get clean
 RUN apt-get -qq install -y r-base && apt-get clean
+RUN apt-get -qq install -y rakudo && apt-get clean
 RUN apt-get -qq install -y ratfor && apt-get clean
+RUN apt-get -qq install -y rc && apt-get clean
 RUN apt-get -qq install -y regina-rexx && apt-get clean
 RUN apt-get -qq install -y ruby && apt-get clean
+RUN apt-get -qq install -y ruby-mustache && apt-get clean
+RUN apt-get -qq install -y rustc && apt-get clean
 RUN apt-get -qq install -y scala && apt-get clean
 RUN apt-get -qq install -y scilab && apt-get clean
+RUN apt-get -qq install -y sed && apt-get clean
 RUN apt-get -qq install -y slsh && apt-get clean
+RUN apt-get -qq install -y spin && apt-get clean
 RUN apt-get -qq install -y squirrel3 && apt-get clean
 RUN apt-get -qq install -y swi-prolog && apt-get clean
 RUN apt-get -qq install -y tcl && apt-get clean
+RUN apt-get -qq install -y tcsh && apt-get clean
 RUN apt-get -qq install -y valac && apt-get clean
+RUN apt-get -qq install -y vim && apt-get clean
 RUN apt-get -qq install -y xsltproc && apt-get clean
+RUN apt-get -qq install -y yabasic && apt-get clean
 RUN apt-get -qq install -y yorick && apt-get clean
 RUN apt-get -qq install -y zoem && apt-get clean
+RUN apt-get -qq install -y zsh && apt-get clean
 ENV PATH /usr/games:$PATH
 ADD . /usr/local/share/quine-relay
 WORKDIR /usr/local/share/quine-relay
