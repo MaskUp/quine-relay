@@ -7,7 +7,9 @@ apts = [*apts.flatten.compact.uniq, *other_packages].sort
 
 dockerfile = []
 dockerfile << "FROM ubuntu:17.04"
-dockerfile << "RUN apt-get update && apt-get upgrade -y"
+dockerfile << "RUN apt-get -qq update > /dev/null"
+dockerfile << "RUN apt-get -qq upgrade -y > /dev/null"
+dockerfile << "RUN apt-get -qq install -y apt-utils > /dev/null"
 apts.each do |apt|
   dockerfile << "RUN apt-get -qq install -y #{ apt } > /dev/null"
 end

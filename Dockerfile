@@ -1,5 +1,7 @@
 FROM ubuntu:17.04
-RUN apt-get update && apt-get upgrade -y
+RUN apt-get -qq update > /dev/null
+RUN apt-get -qq upgrade -y > /dev/null
+RUN apt-get -qq install -y apt-utils > /dev/null
 RUN apt-get -qq install -y afnix > /dev/null
 RUN apt-get -qq install -y algol68g > /dev/null
 RUN apt-get -qq install -y aplus-fsf > /dev/null
