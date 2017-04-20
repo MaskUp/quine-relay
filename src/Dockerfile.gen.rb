@@ -9,7 +9,7 @@ dockerfile = []
 dockerfile << "FROM ubuntu:17.04"
 dockerfile << "RUN apt-get update && apt-get upgrade -y"
 apts.each do |apt|
-  dockerfile << "RUN apt-get -qq install -y #{ apt } && apt-get clean"
+  dockerfile << "RUN apt-get -qq install -y #{ apt } > /dev/null"
 end
 dockerfile << "ENV PATH /usr/games:$PATH"
 dockerfile << "ADD . /usr/local/share/quine-relay"
