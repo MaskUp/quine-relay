@@ -329,13 +329,20 @@ class GDB < CodeGen
   Code = %q(%(printf"#{e[d[PREV,?%]]}"\nquit))
 end
 
-class Flex < CodeGen
+class Fish < CodeGen
   After = FALSELang
-  File = "QR.fl"
-  Cmd = "flex -o QR.fl.c QR.fl && gcc -o QR QR.fl.c && ./QR > OUTFILE"
-  Apt = "flex"
-  Code = %q("%option noyywrap\n%%\n%%\nint main(){puts#{E[PREV]};}")
+  File = "QR.fish"
+  Cmd = "fish QR.fish > OUTFILE"
+  Apt = "fish"
+  Code = %q("echo '#{Q[Q[PREV,B],?!].gsub(?',%('"'"'))}'")
 end
+#class Flex < CodeGen
+#  After = FALSELang
+#  File = "QR.fl"
+#  Cmd = "flex -o QR.fl.c QR.fl && gcc -o QR QR.fl.c && ./QR > OUTFILE"
+#  Apt = "flex"
+#  Code = %q("%option noyywrap\n%%\n%%\nint main(){puts#{E[PREV]};}")
+#end
 
 class Curry < CodeGen
   After = CommonLisp

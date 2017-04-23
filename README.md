@@ -31,7 +31,7 @@ First, you have to type the following apt-get command to install all of them.
 
     $ sudo apt-get install afnix algol68g aplus-fsf aspectc++ aspectj \
       asymptote ats2-lang bash bc bf bsdgames cduce clisp clojure cmake \
-      cmake coffeescript dafny dc ecere-dev elixir emacs24 erlang f2c flex \
+      cmake coffeescript dafny dc ecere-dev elixir emacs24 erlang f2c fish \
       fp-compiler fsharp g++ gambas3-script gap gawk gcc gdb gdc genius \
       gforth gfortran ghc ghostscript gnat gnu-smalltalk gnuplot gobjc \
       golang gpt gri groff groovy guile-2.0 gzip haxe icont iconx intercal \
@@ -116,8 +116,8 @@ Then, build the bundled interpreters.
     $ emacs -Q --script QR.el > QR.erl
     $ escript QR.erl > QR.fsx
     $ fsharpc QR.fsx -o QR.exe && mono QR.exe > QR.false
-    $ ruby vendor/false.rb QR.false > QR.fl
-    $ flex -o QR.fl.c QR.fl && gcc -o QR QR.fl.c && ./QR > QR.fs
+    $ ruby vendor/false.rb QR.false > QR.fish
+    $ fish QR.fish > QR.fs
     $ gforth QR.fs > QR.f
     $ gfortran -o QR QR.f && ./QR > QR.f90
     $ gfortran -o QR QR.f90 && ./QR > QR.gbs
@@ -276,7 +276,7 @@ I used the following Ubuntu deb packages to test this program.
 61  |Erlang             |erlang          |1:19.2.1+dfsg-2ubuntu1
 62  |F#                 |fsharp          |4.0.0.4+dfsg2-2
 63  |FALSE              |*N/A*           |-
-64  |Flex               |flex            |2.6.1-1.3
+64  |Fish               |fish            |2.4.0-1
 65  |Forth              |gforth          |0.7.3+dfsg-4
 66  |FORTRAN77          |f2c             |20100827-3
 67  |Fortran90          |gfortran        |4:6.3.0-2ubuntu1

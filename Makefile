@@ -558,23 +558,21 @@ QR.false: QR.fsx
 	fsharpc QR.fsx -o QR.exe
 	mono QR.exe > QR.false
 
-QR.fl: QR.false
+QR.fish: QR.false
 	@echo
 	@echo "#########################"
-	@echo "##  63: FALSE -> Flex  ##"
+	@echo "##  63: FALSE -> Fish  ##"
 	@echo "#########################"
 	@echo
-	ruby vendor/false.rb QR.false > QR.fl
+	ruby vendor/false.rb QR.false > QR.fish
 
-QR.fs: QR.fl
+QR.fs: QR.fish
 	@echo
 	@echo "#########################"
-	@echo "##  64: Flex -> Forth  ##"
+	@echo "##  64: Fish -> Forth  ##"
 	@echo "#########################"
 	@echo
-	flex -o QR.fl.c QR.fl
-	gcc -o QR QR.fl.c
-	./QR > QR.fs
+	fish QR.fish > QR.fs
 
 QR.f: QR.fs
 	@echo
