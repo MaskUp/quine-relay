@@ -25,6 +25,7 @@ RUN chronic apt-get install -y emacs24
 RUN chronic apt-get install -y erlang
 RUN chronic apt-get install -y f2c
 RUN chronic apt-get install -y fish
+RUN chronic apt-get install -y flex
 RUN chronic apt-get install -y fp-compiler
 RUN chronic apt-get install -y fsharp
 RUN chronic apt-get install -y g++
